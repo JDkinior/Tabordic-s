@@ -12,7 +12,7 @@ document.getElementById('registerForm').addEventListener('submit', async (event)
     };
 
     try {
-        const response = await fetch('/.netlify/Backend/register', {
+        const response = await fetch('/.netlify/functions/register', {
             method: 'POST',
             body: JSON.stringify(user),
             headers: {
