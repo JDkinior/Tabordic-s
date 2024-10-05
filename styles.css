@@ -1,3 +1,4 @@
+/* Estilo general */
 body {
     background-color: #121212;
     color: #e0e0e0;
@@ -9,38 +10,57 @@ body {
     margin: 0;
 }
 
+/* Contenedor principal */
 .container {
     background-color: #1e1e1e;
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     animation: fadeIn 1s ease-in-out;
+    text-align: center; /* Centra los textos */
 }
 
-h1 {
+/* Título Principal */
+#mainTitle {
+    font-size: 2.5rem;
     color: #00bfa5;
-    text-align: center;
+    margin-bottom: 2rem;
 }
 
-.form-group {
-    margin-bottom: 1rem;
+/* Contenedor de selección de formularios */
+.form-selection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem; /* Mayor espacio entre los botones */
+    margin-bottom: 2rem; /* Separación de los botones con el resto del contenido */
 }
 
-label {
-    display: block;
-    margin-bottom: 0.5rem;
-    color: #00bfa5;
-}
-
-input {
-    width: 100%;
-    padding: 0.5rem;
+/* Botones de selección */
+#formSelection button {
+    padding: 0.75rem;
     border: none;
     border-radius: 4px;
-    background-color: #2e2e2e;
-    color: #e0e0e0;
+    background-color: #00bfa5;
+    color: #121212;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 200px; /* Ancho fijo para los botones */
 }
 
+/* Hover de los botones */
+#formSelection button:hover {
+    background-color: #008e76;
+}
+
+/* Formularios */
+.form-group {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+/* Espaciado entre el formulario y el botón */
 button {
     width: 100%;
     padding: 0.75rem;
@@ -53,10 +73,33 @@ button {
     transition: background-color 0.3s ease;
 }
 
+/* Separación mayor de botones y formularios */
+button + button {
+    margin-top: 1rem;
+}
+
+/* Hover en botones de formulario */
 button:hover {
     background-color: #008e76;
 }
 
+/* Texto con hipervínculo */
+.switch-text {
+    margin-top: 1rem;
+    color: #e0e0e0;
+}
+
+.switch-text a {
+    color: #00bfa5;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.switch-text a:hover {
+    text-decoration: underline;
+}
+
+/* Animación para el contenedor */
 @keyframes fadeIn {
     from {
         opacity: 0;
